@@ -13,13 +13,6 @@ pipeline {
             }
         }
 
-        stage('Install Ansible') {
-            steps {
-                sh 'apt-get update'
-                sh 'apt-get install -y ansible'
-            }
-        }
-
         stage('Run Ansible Playbook') {
             steps {
                 ansiblePlaybook(
