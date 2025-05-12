@@ -1,0 +1,10 @@
+---
+- name: Test de déploiement Ansible sur Docker
+  hosts: web
+  become: false
+
+  tasks:
+    - name: Créer un fichier de test dans /root
+      copy:
+        content: "✅ Déploiement Ansible réussi !"
+        dest: /root/ansible-test.txt
